@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+
+}
+/* Sembunyikan scrollbar dari Chrome, Safari dan Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+/* Sembunyikan scrollbar untuk IE, Edge dan Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE dan Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 10vh;
+    position: sticky;
+    top: 0;
+}
+:root{
+    --green: #2BAE66;
+    --purple: #603F83;
+}
+
+.brand_container {
+    background: var(--green);
+}
+.brand {
+    /* background: yellow; */
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+}
+.brand a {
+    /* background: green; */
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+}
+
+.toggle_container {
+    background: var(--green);
+    opacity: 0;
+    pointer-events: none;
+}
+.toggle {
+    /* background: red; */
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 32px;
+}
+.toggle img {
+    width: 32px;
+}
+
+.menu_container {
+    background: var(--green);
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    height: 10vh;
+    opacity: 1;
+}
+.menu {
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 32px;
+    height: 10vh;
+}
+.menu ul {
+    /* background: yellow; */
+    display: inline-flex;
+}
+.menu ul li {
+    /* background: blue; */
+    list-style: none;
+    padding: 8px;
+}
+.menu ul li a {
+    /* background: mediumturquoise; */
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+}
+.menu ul li a:hover {
+    background: var(--purple);
+    color: white;
+}
+
+@media screen and (max-width: 991px) {
+    .toggle_container {
+        opacity: 1;
+        pointer-events: fill;
+        /* cursor: pointer; */
+    }
+    .toggle img {
+        cursor: pointer;
+    }
+
+    .menu_container {
+        top: 10vh;
+        width: 100vw;
+        height: 80vh;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .menu_container.active{
+        opacity: 1;
+        pointer-events: fill;
+    }
+    .menu {
+        /* background: red; */
+        align-items: center;
+        justify-content: center;
+        padding-right: 0px;
+        height: auto;
+    }
+    .menu ul {
+        /* background: yellow; */
+        display: block;
+    }
+    .menu ul li {
+        /* background: blue; */
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .menu ul li a {
+        /* background: mediumturquoise; */
+        text-decoration: none;
+        color: black;
+        padding: 8px;
+        /* margin-bottom: 12px; */
+        border-bottom: 1px solid var(--purple);
+        width: 90vw;
+    }
+}
+
+section.home {
+    background: red;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 75vh 5vh 10vh;
+}
+.greetings_container {
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+.greetings {
+    /* background: red; */
+    text-align: center;
+}
+.greetings h2 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+.greetings h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.arrow_container {
+    background: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.arrow_container .arrow {
+    background: var(--purple);
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.arrow_container .arrow a {
+    text-decoration: none;
+    /* padding: 42px; */
+}
+.arrow_container .arrow a img {
+    /* background: blue; */
+    width: 32px;
+}
+
+.footer_home_container {
+    background: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 32px;
+}
+.social_icons {
+    /* background: red; */
+}
+.social_icons a {
+    /* background: blue; */
+    margin-left: 16px;
+}
+.social_icons a img {
+    width: 32px;
+}
