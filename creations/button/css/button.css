@@ -9,7 +9,6 @@
 }
 /* Sembunyikan scrollbar untuk IE, Edge dan Firefox */
 body {
-    background: var(--black);
     overflow-x: hidden;
     -ms-overflow-style: none;
     /* IE dan Edge */
