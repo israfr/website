@@ -9,7 +9,16 @@
 }
 /* Sembunyikan scrollbar untuk IE, Edge dan Firefox */
 body {
-    overflow: hidden;
+    background: var(--black);
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    /* IE dan Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+/* Sembunyikan scrollbar dari Chrome, Safari dan Opera */
+body::-webkit-scrollbar {
+    display: none;
 }
 :root {
     --green: #009245;
