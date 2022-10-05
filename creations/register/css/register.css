@@ -8,8 +8,17 @@
     font-family: 'Londrina Solid', cursive;
 }
 
+/* Sembunyikan scrollbar untuk IE, Edge dan Firefox */
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    /* IE dan Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+/* Sembunyikan scrollbar dari Chrome, Safari dan Opera */
+body::-webkit-scrollbar {
+    display: none;
 }
 
 :root {
