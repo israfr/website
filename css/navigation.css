@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	font-family: "Londrina Solid", cursive;
+}
+
+/* Sembunyikan scrollbar untuk IE, Edge dan Firefox */
+body {
+	background: var(--grey);
+	overflow-x: hidden;
+	-ms-overflow-style: none;
+	/* IE dan Edge */
+	scrollbar-width: none;
+	/* Firefox */
+}
+
+/* Sembunyikan scrollbar dari Chrome, Safari dan Opera */
+body::-webkit-scrollbar {
+	display: none;
+}
+
+:root {
+	--red: #c1272d;
+	--yellow: #d9e021;
+	--yellow-hover: #bcc21d;
+	--blue: #2e3192;
+	--green: #009245;
+	--purple: #662d91;
+	--grey: #e6e6e6;
+	--black: #1a1a1a;
+	--white: #ffffff;
+}
+
+/* ==================== Main ==================== */
+main {
+	width: 100vw;
+	background: var(--white);
+}
+main.dark {
+	background: var(--black);
+}
+/* ==================== End Main ==================== */
+
+/* ==================== Navbar ==================== */
+.navbar {
+	width: 100vw;
+	height: 14vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--white);
+}
+main.dark .navbar {
+	background: var(--black);
+}
+/* ==================== End Navbar ==================== */
+
+/* ==================== Toggle ==================== */
+.toggle {
+	position: absolute;
+	left: 32px;
+	z-index: -999;
+	transition: all 0.5s ease;
+}
+.navbar.active .toggle {
+	transform: rotate(90deg);
+}
+.toggle__button {
+	font-size: 1.5rem;
+	border: none;
+	background: none;
+	cursor: pointer;
+	color: var(--black);
+}
+main.dark .toggle__button {
+	color: var(--white);
+}
+@media screen and (max-width: 768px) {
+	.toggle {
+		z-index: 1;
+		cursor: pointer;
+	}
+}
+/* ==================== End Toggle ==================== */
+
+/* ==================== Brand ==================== */
+.brand {
+	position: absolute;
+	top: 0;
+	background: var(--red);
+	padding: 24px;
+}
+.brand__link {
+	text-decoration: none;
+	font-size: 2rem;
+	color: white;
+}
+/* ==================== End Brand ==================== */
+
+/* ==================== Button Mode ==================== */
+.button__mode {
+	position: absolute;
+	right: 64px;
+}
+.button__mode button {
+	font-size: 1.5rem;
+	background: none;
+	border: none;
+	margin-left: 8px;
+	cursor: pointer;
+	color: var(--black);
+}
+.button__mode button.active {
+	color: var(--yellow);
+}
+main.dark .button__mode button {
+	color: var(--white);
+}
+main.dark .button__mode button.active {
+	color: var(--yellow);
+}
+@media screen and (max-width: 768px) {
+	.button__mode {
+		right: 32px;
+	}
+}
+/* ==================== End Button mode ==================== */
+
+/* ==================== Navbar Menu ==================== */
+.navbar__menu {
+	width: 100vw;
+	height: 14vh;
+	padding: 0px 64px;
+	display: flex;
+	align-items: center;
+}
+@media screen and (max-width: 768px) {
+	.navbar__menu {
+		position: absolute;
+		top: 14vh;
+		width: 100vw;
+		height: 100vh;
+		padding: 0px 0px;
+		align-items: flex-start;
+		justify-content: center;
+		left: -100vw;
+		background: var(--white);
+	}
+	main.dark .navbar__menu {
+		background: var(--black);
+	}
+	.navbar.active .navbar__menu {
+		left: 0;
+	}
+}
+/* ==================== End Navbar Menu ==================== */
+
+/* ==================== Navbar Unordered ==================== */
+.navbar__unordered {
+	display: inline-flex;
+}
+@media screen and (max-width: 768px) {
+	.navbar__unordered {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+}
+/* ==================== End Navbar Unordered ==================== */
+
+/* ==================== Navbar List ==================== */
+.navbar__list {
+	list-style: none;
+	margin-right: 24px;
+}
+@media screen and (max-width: 768px) {
+	.navbar__list {
+		margin-right: 0px;
+		padding: 8px 0px;
+	}
+}
+/* ==================== End Navbar List ==================== */
+
+/* ==================== Navbar List ==================== */
+.navbar__link {
+	text-decoration: none;
+	font-size: 1.5rem;
+	font-weight: 100;
+	color: var(--black);
+}
+main.dark .navbar__link {
+	color: var(--white);
+}
+/* ==================== End Navbar List ==================== */
